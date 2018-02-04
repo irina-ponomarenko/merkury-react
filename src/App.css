@@ -1,0 +1,264 @@
+.App {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+}
+/* TopMenu elements*/
+
+.WrapperMenu{
+  display: flex;
+  max-width: 473px;
+  width: 100%;
+}
+.TopMenu{
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 42px;
+  border-bottom: 1px solid #d4d9e3;
+}
+.FindSearchWrapper{
+  display: flex;
+  align-items: center;
+  width: 96px;
+  justify-content: center;
+}
+.FindSearchWrapper a{
+  margin-right: 56px;
+}
+.FindSearchWrapper a:last-child{
+  margin-right: 0;
+}
+.Logo{
+  max-width: 276px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-left: 42px;
+}
+.LogoSlideMenu{
+  height: 120px;
+  margin-left: 42px;
+
+}
+.Menu{
+  margin-left: 42px;
+  padding: 48px 0 48px 0;
+}
+.MenuButton{
+  width: 37px;
+  height: 20px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+.MenuButton i{
+  margin-right: 5px;
+}
+.MenuButton i:last-child{
+  margin-right: 0;
+}
+.icon-block{
+  display: none;
+  color: #5584ff;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.MenuButton .fa-bars{
+  color: black;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+.Search{
+  width: 24px;
+  height: 24px;
+}
+.Search .fa-search{
+  font-size: 24px;
+}
+.AddProject{
+  font-size: 18px;
+  color: white;
+  width: 178px;
+  height: 48px;
+  border-radius: 50px;
+  background: #5584ff;
+}
+.NavProfileProject{
+  display: flex;
+  position: fixed;
+  right: 0;
+}
+.AddProject .fa-plus{
+  color: #aac2ff;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.WrapperMessage{
+  display: flex;
+  align-items: center;
+  margin: 0 55px;
+}
+.WrapperMessage i{
+  font-size: 24px;
+}
+.WrapperMessage .fa-envelope{
+  margin-right: 35px;
+}
+.ProfileTopMenu{
+  width: 52px;
+  height: 52px;
+  text-align: center;
+  overflow: hidden;
+}
+.WrapperProfile{
+  display: flex;
+  align-items: center;
+}
+.WrapperProfile i{
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.ProfileTopMenu img{
+  border-radius: 100%;
+}
+
+/* SlideMenu*/
+
+.SlideMenu{
+  background: #0e1a35;
+  left: -318px;
+  height: 100%;
+  position: fixed;
+  width: 318px;
+}
+.SlideMenu ul {
+  border-top: 1px solid #0d172e;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.SlideMenu li {
+  border-bottom: 1px solid #0d172e;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 45px;
+  padding-bottom: 3px;
+  padding-left: 82px;
+  padding-top: 3px;
+  border-left: 10px solid #0e1a35;
+  position: relative;
+}
+.SlideMenu li:hover {
+  cursor: pointer;
+  background-color: #122143;
+  border-left: 10px solid #5584ff;
+  border-bottom: none;
+}
+.SlideMenu a.activeNav{
+  color: #5584ff;
+}
+.Home:before{
+  content: '';
+  position: absolute;
+  background-image: url("./assets/images/home.png");
+  width: 24px;
+  height: 21px;
+  left: 42px;
+  top: 13px;
+}
+.Workflow:before{
+  content: '';
+  position: absolute;
+  background-image: url("./assets/images/Workflow.png");
+  width: 20px;
+  height: 19px;
+  left: 44px;
+  top: 13px;
+}
+.Statistics:before{
+  content: '';
+  position: absolute;
+  background-image: url("./assets/images/statistics.png");
+  width: 24px;
+  height: 22px;
+  left: 42px;
+  top: 13px;
+}
+.Calendar:before{
+  content: '';
+  position: absolute;
+  background-image: url("./assets/images/calendar.png");
+  width: 20px;
+  height: 20px;
+  left: 44px;
+  top: 13px;
+}
+.Users:before{
+  content: '';
+  position: absolute;
+  background-image: url("./assets/images/users.png");
+  width: 20px;
+  height: 20px;
+  left: 44px;
+  top: 13px;
+}
+.Settings:before{
+  content: '';
+  position: absolute;
+  background-image: url("./assets/images/setings.png");
+  width: 21px;
+  height: 22px;
+  left: 44px;
+  top: 13px;
+}
+.SlideMenu a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: "Myriad Pro";
+}
+
+/* Home page*/
+
+.Page{
+  background: #f6f7fa;
+}
+.WrapperPage{
+  padding: 61px 54px 62px 46px;
+}
+h1{
+  font-size: 48px;
+  font-family: "Myriad Pro";
+}
+
+/* Statistics page */
+
+h2{
+  font-size: 36px;
+}
+
+/*Calendar Page*/
+
+.TitleCalendar{
+ display: flex;
+  align-items: center;
+}
+.ChevronLeft{
+  margin-right: 20px;
+  font-size: 18px;
+}
+.ChevronRight{
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+/* Users page */
+
+.TitleUsers span{
+  color: #8492af;
+}
