@@ -91,7 +91,7 @@
 .NavProfileProject{
   display: flex;
   position: fixed;
-  right: 0;
+  right: 42px;
 }
 .AddProject .fa-plus{
   color: #aac2ff;
