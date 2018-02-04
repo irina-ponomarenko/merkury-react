@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import AddProjectButton from './AddProjectButton';
 import ProfileTopMenu from  './ProfileTopMenu';
-import SlideMenu from '../SideMenu/SlideMenu';
+import SlideMenu from '../SlideMenu/SlideMenu';
 
  class TopMenu extends React.Component {
      componentDidMount(){
