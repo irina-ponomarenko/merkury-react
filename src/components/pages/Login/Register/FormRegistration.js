@@ -1,13 +1,14 @@
 import React from 'react';
-import { FormErrors } from './FormErrors';
+import { FormErrors } from '../FormErrors';
 
-class Form extends  React.Component {
+class FormRegistration extends  React.Component {
     constructor (props) {
         super(props);
         this.state = {
+            name: '',
             email: '',
             password: '',
-            formErrors: {email: '', password: ''},
+            formErrors: {email: '', password: '', name:''},
             emailValid: false,
             passwordValid: false,
             formValid: false
@@ -16,6 +17,11 @@ class Form extends  React.Component {
     handlePasswordChange = (event) => {
         console.log('handlePasswordChange', this);
         this.setState({password: event.target.value});
+
+    };
+    handleNameChange = (event) => {
+        console.log('handleNameChange', this);
+        this.setState({name: event.target.value});
 
     };
 
@@ -55,6 +61,7 @@ class Form extends  React.Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log('form is submitted');
+        localStorage.setItem('name', this.state.password);
         localStorage.setItem('email', this.state.email);
         localStorage.setItem('password', this.state.password);
     };
@@ -72,14 +79,18 @@ class Form extends  React.Component {
                     </div>
                     <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
                         <i className="fa fa-user"></i>
-                        <input type="email" name="email" placeholder="Username" className="userName"
-                               value={this.state.email}
-                               onChange={this.handleUserInput}/>
+                        <input type="name" name="name" placeholder="Name" className="userName"/>
                     </div>
-                    <div className={`form-group PasswordWrapper ${this.errorClass(this.state.formErrors.password)}`}>
+                    <div className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
                         <i className="fa fa-unlock-alt"></i>
                         <input type="password" name="password" placeholder="Password" className="Password"
                                value={this.state.password}
+                               onChange={this.handleUserInput}/>
+                    </div>
+                    <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
+                        <i className="fa fa-user"></i>
+                        <input type="email" name="email" placeholder="Email" className="userName"
+                               value={this.state.email}
                                onChange={this.handleUserInput}/>
                     </div>
                     <button type="submit" className="submitButton" disabled={!this.state.formValid}><p>Enter</p><i className="fa fa-chevron-right"></i></button>
@@ -88,4 +99,4 @@ class Form extends  React.Component {
         );
     }
 }
-export  default Form;
+export default FormRegistration;

@@ -2,13 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
-import './assets/fonts/RobotoRegular/RobotoRegular.ttf';
-import { BrowserRouter } from 'react-router-dom';
+import '../node_modules/material-design-icons/iconfont/material-icons.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import '../node_modules/bootstrap/dist/css/bootstrap-grid.css';
 import App from './App';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+injectTapEventPlugin()
 
 ReactDOM.render(
-    <BrowserRouter>
+    <MuiThemeProvider>
         <App />
-    </BrowserRouter>
+    </MuiThemeProvider>
     ,document.getElementById('root')
 );

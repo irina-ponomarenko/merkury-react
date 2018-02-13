@@ -1,8 +1,8 @@
 import React from 'react';
+import Logo from '../../../../assets/images/logo.png';
+import Tabs from '../Tabs';
 
-import Logo from '../../../assets/images/logo.png';
-import Tabs from './Tabs';
-class HeaderLogin extends  React.Component {
+class HeaderLogin2 extends  React.Component {
     render() {
         return(
             <div className="HeaderLogin">
@@ -16,4 +16,4 @@ class HeaderLogin extends  React.Component {
         );
     }
 }
-export default HeaderLogin;
+export default HeaderLogin2;
