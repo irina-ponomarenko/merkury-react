@@ -21,5 +21,4 @@ const DefaultLayout = ({component: Component, ...rest}) => {
     )
 };
 
-
 export default DefaultLayout;

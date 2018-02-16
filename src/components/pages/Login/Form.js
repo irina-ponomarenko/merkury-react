@@ -54,9 +54,16 @@ class Form extends  React.Component {
     };
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log('form is submitted');
         localStorage.setItem('email', this.state.email);
         localStorage.setItem('password', this.state.password);
+
+        fetch('/api/user',{
+            headers: {
+                'Content-type': 'application/json'
+            },
+            metod: 'post',
+            body: JSON.stringify()
+        });
     };
     errorClass = (error) => {
         return(error.length === 0 ? '' : 'has-error');
