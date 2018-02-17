@@ -28,7 +28,7 @@ export default class NavAutentefiv extends React.Component {
                     <FormRegistration/>
                 </Tab>
                 <Tab label="Login" value="b" className="Login">
-                   <Form/>
+                    <Form history={this.props.history} />
                 </Tab>
             </Tabs>
         );

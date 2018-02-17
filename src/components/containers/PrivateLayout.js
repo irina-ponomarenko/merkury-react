@@ -6,8 +6,12 @@ const DefaultLayout = ({component: Component, ...rest}) => {
     return (
         <Route {...rest} render={matchProps => {
             const userExist = false;
+
             if (!userExist) {
                 return <Redirect to="/Login"/>
+            }
+            if (!userExist == true) {
+                return <Redirect to = "/"/>
             }
                 else {
                     return (

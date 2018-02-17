@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import TopMenu from '../Menus/TopMenu/TopMenu';
 
 class Calendar extends React.Component {
     render() {

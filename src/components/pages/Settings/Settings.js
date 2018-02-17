@@ -1,7 +1,5 @@
 import React from 'react';
 
-import TopMenu from '../Menus/TopMenu/TopMenu';
-
 class Settings extends React.Component {
     render() {
         return(

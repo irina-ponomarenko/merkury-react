@@ -1,7 +1,8 @@
 import React  from 'react';
 import './App.css';
+import createBrowserHistory from 'history/createBrowserHistory';
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import PrivateLayout from './components/containers/PrivateLayout';
 import Home from './components/pages/Home/Home';
 import Workflow from './components/pages/Workflow/Workflow';
@@ -12,10 +13,10 @@ import Settings from './components/pages/Settings/Settings';
 import Login from './components/pages/Login/Login';
 import NotFound from './components/pages/NotFound';
 
-class App extends React.Component{
-    render(){
+const App = () =>{
+const BrowserHistory = createBrowserHistory();
         return (
-            <Router>
+            <Router history={BrowserHistory}>
                 <Switch>
                     <Route exact path="/Login" component={Login}/>
                     <PrivateLayout exact path="/" component={Home} />
@@ -29,7 +30,5 @@ class App extends React.Component{
                 </Switch>
             </Router>
         );
-    }
-
-}
+};
 export default App;

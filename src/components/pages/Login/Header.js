@@ -10,7 +10,7 @@ class HeaderLogin extends  React.Component {
                     <div className="Logo LogoPageLogin">
                         <img src={Logo} alt="Logo"/>
                     </div>
-                    <Tabs/>
+                    <Tabs history={this.props.history}/>
                 </div>
             </div>
         );

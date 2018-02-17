@@ -13,9 +13,9 @@ class Form extends  React.Component {
             formValid: false
         }
     }
-    handlePasswordChange = (event) => {
+    handlePasswordChange = (e) => {
         console.log('handlePasswordChange', this);
-        this.setState({password: event.target.value});
+        this.setState({password: e.target.value});
 
     };
 
@@ -54,17 +54,12 @@ class Form extends  React.Component {
     };
     handleSubmit = (e) => {
         e.preventDefault();
-        localStorage.setItem('email', this.state.email);
-        localStorage.setItem('password', this.state.password);
-
-        fetch('/api/user',{
-            headers: {
-                'Content-type': 'application/json'
-            },
-            metod: 'post',
-            body: JSON.stringify()
-        });
+        const { history } = this.props;
+        localStorage.setItem('email',JSON.stringify(this.state.email));
+        localStorage.setItem('password', JSON.stringify(this.state.password));
+            history.push('/');
     };
+
     errorClass = (error) => {
         return(error.length === 0 ? '' : 'has-error');
     };
