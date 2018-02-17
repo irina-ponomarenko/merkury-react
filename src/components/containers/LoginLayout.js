@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import TopMenu from '../pages/Menus/TopMenu/TopMenu';
 
 const DefaultLoginLayout = ({component: Component, ...rest}) => {
     return (
@@ -14,7 +13,6 @@ const DefaultLoginLayout = ({component: Component, ...rest}) => {
             else {
                 return (
                     <div className="Wrapper">
-                        <TopMenu/>
                         <Component {...matchProps} />
                     </div>
                 )
