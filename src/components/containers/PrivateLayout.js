@@ -10,7 +10,7 @@ const DefaultLayout = ({component: Component, ...rest}) => {
             if (!userExist) {
                 return <Redirect to="/Login"/>
             }
-            if (!userExist == true) {
+            if (!userExist === true) {
                 return <Redirect to = "/"/>
             }
                 else {

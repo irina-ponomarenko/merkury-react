@@ -19,6 +19,7 @@ export default class NavAutentefiv extends React.Component {
     };
 
     render() {
+        const self = this;
         return (
             <Tabs
                 value={this.state.value}
@@ -28,7 +29,7 @@ export default class NavAutentefiv extends React.Component {
                     <FormRegistration/>
                 </Tab>
                 <Tab label="Login" value="b" className="Login">
-                    <Form history={this.props.history} />
+                    <Form history={self.props.history} />
                 </Tab>
             </Tabs>
         );
