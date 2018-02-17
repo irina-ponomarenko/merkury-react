@@ -45,12 +45,12 @@ import SlideMenu from '../SlideMenu/SlideMenu';
                          </div>
                      </div>
                      <div className="NavProfileProject">
-                         <AddProjectButton history={this.props.history}/>
+                         <AddProjectButton/>
                          <div className="WrapperMessage">
                              <Link to =""><i className="fa fa-envelope"></i></Link>
                              <Link to =""><i className="fa fa-bell"></i></Link>
                          </div>
-                         <ProfileTopMenu/>
+                         <ProfileTopMenu history={this.props.history}/>
                      </div>
                  </div>
              </div>
