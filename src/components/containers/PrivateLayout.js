@@ -5,22 +5,18 @@ import TopMenu from '../pages/Menus/TopMenu/TopMenu';
 const DefaultLayout = ({component: Component, ...rest}) => {
     return (
         <Route {...rest} render={matchProps => {
-            const userExist = false;
-
-            if (!userExist) {
-                return <Redirect to="/Login"/>
+            const checkLogin = localStorage.getItem('checkLogin');
+            if (checkLogin === 'logged') {
+                return (
+                    <div className="Wrapper">
+                        <TopMenu/>
+                        <Component {...matchProps} />
+                    </div>
+                );
             }
-            if (!userExist === true) {
-                return <Redirect to = "/"/>
+            else {
+                return <Redirect to = "/Login"/>
             }
-                else {
-                    return (
-                        <div className="Wrapper">
-                            <TopMenu/>
-                            <Component {...matchProps} />
-                        </div>
-                    );
-                }
         }} />
     )
 };

@@ -55,9 +55,8 @@ class Form extends  React.Component {
     handleSubmit = (e) => {
         e.preventDefault();
         const { history } = this.props;
-        localStorage.setItem('email',JSON.stringify(this.state.email));
-        localStorage.setItem('password', JSON.stringify(this.state.password));
-            history.push('/');
+        localStorage.setItem('checkLogin', 'logged');
+        history.push('/');
     };
 
     errorClass = (error) => {
