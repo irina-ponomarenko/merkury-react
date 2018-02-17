@@ -20,7 +20,7 @@ const BrowserHistory = createBrowserHistory();
             <Router history={BrowserHistory}>
                 <Switch>
                     <LoginLayout exact path="/Login" component={Login}/>
-                    <Route exact path="/" component={Home} />
+                    <PrivateLayout exact path="/" component={Home} />
                     <PrivateLayout exact path="/Workflow" component={Workflow} />
                     <PrivateLayout exact path="/Statistics" component={Statistics} />
                     <PrivateLayout exact path="/Calendar" component={Calendar}/>

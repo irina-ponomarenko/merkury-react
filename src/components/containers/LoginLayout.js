@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import TopMenu from '../pages/Menus/TopMenu/TopMenu';
-import Login from '../pages/Login/Login';
 
 const DefaultLoginLayout = ({component: Component, ...rest}) => {
     return (
@@ -9,7 +8,7 @@ const DefaultLoginLayout = ({component: Component, ...rest}) => {
             const checkLogin = localStorage.getItem('checkLogin');
             if (checkLogin === 'logged') {
                 return (
-                    <Redirect to = "/"/>
+                    <Redirect to = "/Login"/>
                 );
             }
             else {
