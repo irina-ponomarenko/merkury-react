@@ -1,10 +1,11 @@
 import React from 'react';
 
 class AddProjectButton extends React.Component {
-    handleClick = () => {
+    handleClick = (e) => {
         const { history } = this.props;
-        localStorage.setItem('checkLogin', 'nologged');
-        history.push('/Login')
+        localStorage.setItem('checkLogin', 'logged');
+        history.push('/');
+        console.log(e);
         };
     render () {
         return(

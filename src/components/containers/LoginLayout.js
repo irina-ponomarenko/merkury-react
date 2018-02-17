@@ -1,24 +1,27 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import TopMenu from '../pages/Menus/TopMenu/TopMenu';
+import Login from '../pages/Login/Login';
 
-const DefaultLayout = ({component: Component, ...rest}) => {
+const DefaultLoginLayout = ({component: Component, ...rest}) => {
     return (
         <Route {...rest} render={matchProps => {
             const checkLogin = localStorage.getItem('checkLogin');
             if (checkLogin === 'logged') {
                 return (
-                    <div className="Wrapper">
-                        <TopMenu history={matchProps.history} />
-                        <Component {...matchProps} />
-                    </div>
+                    <Redirect to = "/"/>
                 );
             }
             else {
-                return <Redirect to = "/Login"/>
+                return (
+                    <div className="Wrapper">
+                        <TopMenu/>
+                        <Component {...matchProps} />
+                    </div>
+                )
             }
         }} />
     )
 };
 
-export default DefaultLayout;
+export default DefaultLoginLayout;
