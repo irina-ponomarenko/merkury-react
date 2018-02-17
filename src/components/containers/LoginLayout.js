@@ -8,7 +8,7 @@ const DefaultLoginLayout = ({component: Component, ...rest}) => {
             const checkLogin = localStorage.getItem('checkLogin');
             if (checkLogin === 'logged') {
                 return (
-                    <Redirect to = "/Login"/>
+                    <Redirect to = "/"/>
                 );
             }
             else {

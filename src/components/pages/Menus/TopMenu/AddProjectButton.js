@@ -4,7 +4,7 @@ class AddProjectButton extends React.Component {
     handleClick = (e) => {
         const { history } = this.props;
         localStorage.setItem('checkLogin', 'logged');
-        history.push('/');
+        history.push('/Login');
         console.log(e);
         };
     render () {
