@@ -1,99 +1,68 @@
 import React from 'react';
+import { render } from 'react-dom';
 import { FormErrors } from '../FormErrors';
 
 class FormRegistration extends  React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
+
+
         this.state = {
-            name: '',
-            email: '',
-            password: '',
-            formErrors: {email: '', password: '', name:''},
-            emailValid: false,
-            passwordValid: false,
-            formValid: false
-        }
+            signUpForm: {
+                email: '',
+                password: ''
+            },
+        };
+
+        this.collectUserData = this.collectUserData.bind(this);
+        this.updateUserData = this.updateUserData.bind(this);
+
     }
-    handlePasswordChange = (event) => {
-        console.log('handlePasswordChange', this);
-        this.setState({password: event.target.value});
 
-    };
-    handleNameChange = (event) => {
-        console.log('handleNameChange', this);
-        this.setState({name: event.target.value});
 
-    };
+    updateUserData(event) {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
 
-    handleUserInput = (e) => {
-        const name = e.target.name;
-        const value = e.target.value;
-        this.setState({[name]: value},
-            () => { this.validateField(name, value) });
-    };
+        this.setState({
+            signUpForm: Object.assign(this.state.signUpForm, {
+                [name]: value
+            })
+        });
+    }
 
-    validateField = (fieldName, value) => {
-        let fieldValidationErrors = this.state.formErrors;
-        let emailValid = this.state.emailValid;
-        let passwordValid = this.state.passwordValid;
-
-        switch(fieldName) {
-            case 'email':
-                emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-                fieldValidationErrors.email = emailValid ? '' : ' is invalid';
-                break;
-            case 'password':
-                passwordValid = value.length >= 6;
-                fieldValidationErrors.password = passwordValid ? '': ' is too short';
-                break;
-            default:
-                break;
-        }
-        this.setState({formErrors: fieldValidationErrors,
-            emailValid: emailValid,
-            passwordValid: passwordValid
-        }, this.validateForm);
-    };
-
-    validateForm = () => {
-        this.setState({formValid: this.state.emailValid && this.state.passwordValid});
-    };
-    handleSubmit = (e) => {
-        e.preventDefault();
-        console.log('form is submitted');
-        localStorage.setItem('name', this.state.password);
-        localStorage.setItem('email', this.state.email);
-        localStorage.setItem('password', this.state.password);
-    };
-    errorClass = (error) => {
-        return(error.length === 0 ? '' : 'has-error');
-    };
+    collectUserData(event) {
+        event.preventDefault();
+        localStorage.setItem('userData', JSON.stringify(this.state.signUpForm));
+    }
 
     render() {
         return(
             <div className="FormWrapper">
-                <h2>Welcome <span>back!</span></h2>
-                <form className="form-signin" onSubmit={this.handleSubmit}>
-                    <div className="panel panel-default">
-                        <FormErrors formErrors={this.state.formErrors} />
-                    </div>
-                    <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
-                        <i className="fa fa-user"></i>
-                        <input type="name" name="name" placeholder="Name" className="userName"/>
-                    </div>
-                    <div className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
+                <h2>Register</h2>
+                <form className="form-signin" onSubmit={this.collectUserData}>
+                    <div className="form-group">
                         <i className="fa fa-unlock-alt"></i>
-                        <input type="password" name="password" placeholder="Password" className="Password"
-                               value={this.state.password}
-                               onChange={this.handleUserInput}/>
+                        <input type="email"
+                               name="email"
+                               placeholder="Username"
+                               className="userName"
+                               value={this.state.signUpForm.email}
+                               onChange={this.updateUserData}
+                        />
                     </div>
-                    <div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
+                    <div className="form-group">
                         <i className="fa fa-user"></i>
-                        <input type="email" name="email" placeholder="Email" className="userName"
-                               value={this.state.email}
-                               onChange={this.handleUserInput}/>
+                        <input type="password"
+                               name="password"
+                               placeholder="Password"
+                               className="Password"
+                               value={this.state.signUpForm.password}
+                               onChange={this.updateUserData}
+                        />
                     </div>
-                    <button type="submit" className="submitButton" disabled={!this.state.formValid}><p>Enter</p><i className="fa fa-chevron-right"></i></button>
+                    <button type="submit" className="submitButton"><p>Enter</p><i className="fa fa-chevron-right"></i></button>
                 </form>
             </div>
         );

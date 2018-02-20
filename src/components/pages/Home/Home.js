@@ -6,7 +6,7 @@ class Home extends React.Component {
             <div className="Page">
                 <div className="WrapperPage">
                     <header className="PageHeader">
-                        <h1>Hello John!</h1>
+                        <h1>Hello {this.props.userData.email}!</h1>
                     </header>
                 </div>
             </div>
