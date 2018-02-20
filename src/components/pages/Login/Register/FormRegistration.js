@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { FormErrors } from '../FormErrors';
 
 class FormRegistration extends  React.Component {
