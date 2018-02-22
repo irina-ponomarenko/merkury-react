@@ -17,7 +17,7 @@ class FormRegistration extends  React.Component {
         this.updateUserData = this.updateUserData.bind(this);
 
     }
-    
+
     updateUserData(event) {
         const target = event.target;
         const value = target.value;

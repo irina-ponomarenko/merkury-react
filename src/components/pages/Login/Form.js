@@ -52,7 +52,7 @@ class Form extends  React.Component {
     validateForm = () => {
         this.setState({formValid: this.state.emailValid && this.state.passwordValid});
     };
-    handleSubmit = (e) => {
+    handleSubmit = (e, res) => {
         e.preventDefault();
         const {history} = this.props;
         const userData = JSON.parse(localStorage.getItem('userData'));
@@ -62,10 +62,10 @@ class Form extends  React.Component {
         const { email, password } = this.state;
         localStorage.setItem('checkLogin', 'logged');
         if (userDataUsername === email && userDataPass === password) {
+            localStorage.setItem('username', userDataUsername);
             history.push('/');
         }
     };
-
     errorClass = (error) => {
         return(error.length === 0 ? '' : 'has-error');
     };
