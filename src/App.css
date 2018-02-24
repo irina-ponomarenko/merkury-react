@@ -244,6 +244,8 @@
   padding: 61px 54px 62px 46px;
 }
 .PageHeader{
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 38px;
 }
 h1{

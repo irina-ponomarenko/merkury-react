@@ -33,6 +33,13 @@ select{
 select span{
     color: #8492af;
 }
+.WrapperDropdown Select{
+    margin-right: 32px;
+    background: transparent;
+}
+.WrapperDropdown Select:last-child{
+    margin-right: 0;
+}
 .BoxGroup{
     height: 362px;
 }
