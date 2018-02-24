@@ -243,6 +243,9 @@
 .WrapperPage{
   padding: 61px 54px 62px 46px;
 }
+.PageHeader{
+  margin-bottom: 38px;
+}
 h1{
   font-size: 48px;
   margin-bottom: 40px;

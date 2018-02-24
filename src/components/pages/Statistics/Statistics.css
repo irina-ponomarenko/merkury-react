@@ -1,0 +1,10 @@
+.ChengePanel button{
+    margin-right: 52px;
+    font-size: 20px;
+    color: #8492af;
+    background: transparent;
+    outline: none;
+}
+.CChengePanel button:last-child{
+    margin-right: 0;
+}
