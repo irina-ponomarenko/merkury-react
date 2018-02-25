@@ -4,7 +4,7 @@ import './BoxWrapper.css';
 class BoxWrapper extends React.Component {
     render() {
         return(
-            <div className="BoxWrapper BoxWrapper--Padding">
+            <div className={'BoxWrapper BoxWrapper--Padding ' + this.props.className}>
                 {this.props.children}
             </div>
         )

@@ -29,9 +29,8 @@ select{
     border: 1px solid #8492af;
     border-radius: 50px;
     padding: 15px;
-}
-select span{
     color: #8492af;
+    font-family: 'Roboto', sans-serif;
 }
 .WrapperDropdown Select{
     margin-right: 32px;
@@ -40,6 +39,6 @@ select span{
 .WrapperDropdown Select:last-child{
     margin-right: 0;
 }
-.BoxGroup{
-    height: 362px;
+.BoxWrapper--Position{
+    display: flex;
 }

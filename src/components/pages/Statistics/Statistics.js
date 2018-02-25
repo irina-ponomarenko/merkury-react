@@ -5,6 +5,7 @@ import ReactHighcharts from 'react-highcharts';
 import ActiveUser from '../../../config/splineChartLittle1.config';
 import Select from '../atoms/Select';
 import SelectPeriod from '../atoms/SelectType';
+import  SalesCharts from '../../../config/splineChartSales.config';
 
 class Statistics extends React.Component {
     render() {
@@ -21,17 +22,24 @@ class Statistics extends React.Component {
                         </div>
                     </header>
                     <div className="BoxGroup">
-                        <BoxWrapper>
-                            <header className="BoxWrapperHeader">
-                                <h3>Active users</h3>
-                                <div className="ChengePanel">
-                                    <button type="button"><i className="fa fa-pencil"></i></button>
-                                    <button type="button"><i className="fa fa-trash"></i></button>
-                                </div>
-                            </header>
-                            <ReactHighcharts config={ActiveUser}></ReactHighcharts>
+                        <BoxWrapper className="BoxWrapper--Position">
+                            <div className="WrapperTitle">
+                                <h4>1,560</h4>
+                                <span>Sales</span>
+                            </div>
+                            <ReactHighcharts config={SalesCharts}></ReactHighcharts>
                         </BoxWrapper>
                     </div>
+                    <BoxWrapper>
+                        <header className="BoxWrapperHeader">
+                            <h3>Active users</h3>
+                            <div className="ChengePanel">
+                                <button type="button"><i className="fa fa-pencil"></i></button>
+                                <button type="button"><i className="fa fa-trash"></i></button>
+                            </div>
+                        </header>
+                        <ReactHighcharts config={ActiveUser}></ReactHighcharts>
+                    </BoxWrapper>
                 </div>
             </div>
         )
