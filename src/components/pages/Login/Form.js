@@ -55,16 +55,27 @@ class Form extends  React.Component {
     handleSubmit = (e, res) => {
         e.preventDefault();
         const {history} = this.props;
-        const userData = JSON.parse(localStorage.getItem('userData'));
-        const userDataUsername = userData.email;
-        const userDataPass = userData.password;
 
-        const { email, password } = this.state;
-        localStorage.setItem('checkLogin', 'logged');
-        if (userDataUsername === email && userDataPass === password) {
-            localStorage.setItem('username', userDataUsername);
-            history.push('/');
-        }
+        const user = {
+            username: this.state.email,
+            pass: this.state.password
+        };
+        console.log(user)
+
+        fetch('/api/checkUser', {
+            body: JSON.stringify(user),
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        // const { email, password } = this.state;
+        // localStorage.setItem('checkLogin', 'logged');
+        // if (userDataUsername === email && userDataPass === password) {
+        //     localStorage.setItem('username', userDataUsername);
+        //     history.push('/');
+        // }
     };
     errorClass = (error) => {
         return(error.length === 0 ? '' : 'has-error');
