@@ -1,4 +1,4 @@
-const SalesChart = {
+const ViewsChart = {
     chart: {
         type: 'spline',
         height: '190',
@@ -35,7 +35,7 @@ const SalesChart = {
     plotOptions: {
         spline: {
             lineWidth: 4,
-            color: '#f83c7b',
+            color: '#5484ff',
             states: {
                 hover: {
                     lineWidth: 5
@@ -61,4 +61,4 @@ const SalesChart = {
     }
 
 };
-export default SalesChart;
+export default ViewsChart;

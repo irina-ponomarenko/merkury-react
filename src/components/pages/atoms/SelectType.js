@@ -9,7 +9,7 @@ class Select extends React.Component {
         return(
           <select className="TypeSelect" onChange={this.onChange}>
               {
-                  this.props.data.map((index,item) => {
+                  this.props.data.map((item,index) => {
                       return <option key={index} value={item}>Type:{item}</option>
                   })
               }

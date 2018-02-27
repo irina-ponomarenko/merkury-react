@@ -22,3 +22,23 @@
 .WrapperTitle span{
     font-size: 20px;
 }
+.BoxGroup{
+    display: flex;
+    justify-content: center;
+}
+.WrapperDonutChart{
+    display: flex;
+    align-items: center;
+    max-width: 355px;
+    width: 100%;
+    justify-content: space-between;
+}
+.ContainerCharts{
+    display: flex;
+    justify-content: space-around;
+}
+.BoxWrapper--Donut{
+    max-width: 1512px !important;
+    width: 100%;
+    margin-top: 45px;
+}
