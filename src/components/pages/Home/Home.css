@@ -1,0 +1,129 @@
+/* Home page*/
+
+.Page{
+    background: #f6f7fa;
+    width: 100%;
+    height: auto;
+    padding-top: 110px;
+}
+.WrapperPage{
+    padding: 61px 54px 62px 46px;
+    margin: 0 auto;
+}
+.PageHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+}
+h1{
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+.TitleMessage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.TitleMessage h4{
+    font-size: 24px;
+    font-family: 'Roboto',sans-serif;
+    color: #0e1a35;
+    margin: 0;
+}
+.namberMessage{
+    display: flex;
+}
+.namberMessage .blueNamber{
+    margin-right: 10px;
+}
+.blueNamber,.redNamber, .iconUser{
+    width: 47px;
+    height: 47px;
+    background: #5384ff;
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.redNamber{
+    background: #f83c7b;
+}
+.wrapperMessage{
+    max-width: 472px !important;
+    width: 100%;
+    padding: 0 !important;
+}
+.TitleMessage{
+    padding: 31px 34px;
+}
+.message{
+    display: flex;
+    align-items: center;
+    padding: 31px 34px;
+    border-bottom: 1px solid #dadee7;
+    border-top: 1px solid #dadee7;
+}
+.messagePadding{
+    padding-bottom: 15px;
+}
+.titleBlock{
+    text-align: left;
+}
+.titleBlock p{
+    color: #0e1a35;
+    font-size: 20px;
+    font-family: 'Roboto',sans-serif;
+    margin: 0;
+}
+.titleBlock span{
+    color: #f83c7b;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+.titleBlock h4{
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+}
+.titleBlock h4 > span{
+    color: #8492af;
+    font-weight: 300;
+}
+.option{
+    cursor: pointer;
+    font-size: 30px;
+    color: #8492af;
+}
+.newMessage p{
+    font-size: 14px;
+}
+.iconUser{
+    margin-right: 23px;
+}
+.wrapperBlock{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.greySpan span{
+    color: #8492af;
+}
+.shareMessage .fa-share, .fa-cog{
+    color: #8492af;
+    display: flex;
+    -webkit-transform: scaleX(-1);
+    font-size: 20px;
+    cursor: pointer;
+}
+.shareMessage{
+    margin-top: 16px;
+}
+.shareMessage .fa-share{
+    margin-right: 15px;
+}
+.shareMessage{
+    display: flex;
+}
