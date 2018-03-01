@@ -5,6 +5,10 @@ import Select from '../atoms/Select';
 import ReactHighcharts from 'react-highcharts';
 import  SalesChart  from '../../../config/pieChart.config';
 import ReportChart from '../../../config/splineChart.config';
+import ProfilePhoto from '../../../assets/images/profilePictures.png';
+import ProfilePhoto2 from '../../../assets/images/profilePictures-2.png';
+import ProfilePhoto4 from '../../../assets/images/profilePictures-4.png';
+import ProfilePhoto3 from '../../../assets/images/profilePictures-3.png';
 
 class Home extends React.Component {
     render() {
@@ -110,10 +114,10 @@ class Home extends React.Component {
                                 </div>
                             </div>
                         </header>
-                        <div className="message messagePadding">
+                        <div className="message messagePadding activeMessage">
                             <div className="wrapperBlock">
                                 <div className="iconUser">
-                                    <span>N</span>
+                                    <span><img src={ProfilePhoto} alt="ProfilePhoto"/></span>
                                 </div>
                                 <div className="titleBlock newMessage">
                                     <h4>Nina Jones <span>5 minutes ago</span></h4>
@@ -125,10 +129,10 @@ class Home extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="message messagePadding">
+                        <div className="message messagePadding activeMessage">
                             <div className="wrapperBlock">
                                 <div className="iconUser">
-                                    <span>F</span>
+                                    <span><img src={ProfilePhoto} alt="ProfilePhoto"/></span>
                                 </div>
                                 <div className="titleBlock newMessage">
                                     <h4>Nina Jones <span>About 20 hours ago</span></h4>
@@ -143,7 +147,7 @@ class Home extends React.Component {
                         <div className="message messagePadding">
                             <div className="wrapperBlock">
                                 <div className="iconUser">
-                                    <span>N</span>
+                                    <span><img src={ProfilePhoto2} alt="ProfilePhoto"/></span>
                                 </div>
                                 <div className="titleBlock newMessage">
                                     <h4>James Smith <span>2 days ago</span></h4>
@@ -158,7 +162,7 @@ class Home extends React.Component {
                         <div className="message messagePadding">
                             <div className="wrapperBlock">
                                 <div className="iconUser">
-                                    <span>F</span>
+                                    <span><img src={ProfilePhoto} alt="ProfilePhoto"/></span>
                                 </div>
                                 <div className="titleBlock newMessage">
                                     <h4>Nina Jones <span>About 2 weeks ago</span></h4>
@@ -167,6 +171,61 @@ class Home extends React.Component {
                                         <i className="fa fa-share"></i>
                                         <i className="fa fa-cog"></i>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </BoxWrapper>
+
+                    <BoxWrapper className="wrapperMessage">
+                        <header className="TitleMessage">
+                            <h4>Activity</h4>
+                            <div className="namberMessage">
+                                <div className="blueNamber">
+                                    <span>10</span>
+                                </div>
+                            </div>
+                        </header>
+                        <div className="message borderButtonNone">
+                            <div className="wrapperBlock">
+                                <div className="iconUser userLine">
+                                    <span><img src={ProfilePhoto} alt="ProfilePhoto"/></span>
+                                </div>
+                                <div className="titleBlock newMessage colorSpan">
+                                    <h4>Nina Jones <span>added a new project</span> Free UI Kit</h4>
+                                    <span> <i className="fa fa-clock-o"></i> Just now</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="message borderNone">
+                            <div className="wrapperBlock">
+                                <div className="iconUser userLine">
+                                    <span><img src={ProfilePhoto2} alt="ProfilePhoto"/></span>
+                                </div>
+                                <div className="titleBlock newMessage colorSpan">
+                                    <h4>James Smith <span>commented project </span>Free PSD Template</h4>
+                                    <span> <i className="fa fa-clock-o"></i> 40 minutes ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="message borderNone">
+                            <div className="wrapperBlock">
+                                <div className="iconUser userLine">
+                                    <span><img src={ProfilePhoto4} alt="ProfilePhoto"/></span>
+                                </div>
+                                <div className="titleBlock newMessage colorSpan">
+                                    <h4>Alex Clooney <span>completed task </span>Symu Website</h4>
+                                    <span> <i className="fa fa-clock-o"></i> 1 hour ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="message borderNone">
+                            <div className="wrapperBlock">
+                                <div className="iconUser userLine">
+                                    <span><img src={ProfilePhoto3} alt="ProfilePhoto"/></span>
+                                </div>
+                                <div className="titleBlock newMessage colorSpan">
+                                    <h4>Alexandra Spears <span>added a new project</span>Free PSD (...)</h4>
+                                    <span> <i className="fa fa-clock-o"></i> 3 hour ago</span>
                                 </div>
                             </div>
                         </div>

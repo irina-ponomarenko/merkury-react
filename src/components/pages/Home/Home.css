@@ -92,6 +92,9 @@ h1{
     color: #8492af;
     font-weight: 300;
 }
+.titleBlock i{
+    font-size: 20px;
+}
 .option{
     cursor: pointer;
     font-size: 30px;
@@ -102,6 +105,41 @@ h1{
 }
 .iconUser{
     margin-right: 23px;
+}
+.userLine{
+    position: relative;
+}
+.userLine:before{
+    content: '';
+    width: 1px;
+    height: 35px;
+    display: block;
+    background: #8492af;
+    position: absolute;
+    bottom: -35px;
+    left: 23px;
+    right: 0;
+}
+.userLine:after{
+    content: '';
+    width: 1px;
+    height: 35px;
+    display: block;
+    background: #8492af;
+    position: absolute;
+    top: -35px;
+    left: 23px;
+    right: 0;
+}
+
+.iconUser span{
+    overflow: hidden;
+}
+.iconUser span img{
+    border-radius: 50%;
+    width: 47px;
+    height: 47px;
+
 }
 .wrapperBlock{
     display: flex;
@@ -126,4 +164,20 @@ h1{
 }
 .shareMessage{
     display: flex;
+}
+.activeMessage{
+    background: #f4f5f8;
+    border-left: 1px solid #8492af;
+}
+.borderNone{
+    border: none;
+}
+.borderButtonNone{
+    border-bottom: none;
+}
+.colorSpan span{
+    color: #8492af;
+}
+.colorSpan h4{
+    margin-bottom: 5px;
 }
