@@ -1,0 +1,81 @@
+.wrapperBlockPage{
+    max-width: 460px;
+    width: 100%;
+    margin-right: 62px;
+}
+.wrapperBlockPage:last-child{
+    margin-right: 0;
+}
+.wrapperBlockPage header{
+    display: flex;
+    align-items: center;
+}
+.wrapperBlockPage header i{
+    font-size: 30px;
+    color: #8492af;
+    cursor: pointer;
+}
+.wrapperBlockPage header span{
+    color: #8492af;
+}
+.messageList{
+    padding: 0;
+}
+.messageList li{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 38px 36px;
+    border: 1px solid #8492af;
+    margin-bottom: 18px;
+}
+.messageList li:last-child{
+    margin-bottom: 0;
+}
+.messageComponent{
+    display: flex;
+}
+.icon{
+    width: 47px;
+    height: 47px;
+    background: #5384ff;
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 24px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-right: 25px;
+}
+.titleMessage p{
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+}
+.titleMessage{
+    text-align: left;
+    font-size: 14px;
+}
+.titleMessage span{
+    color: #8492af;
+}
+.titleMessage span i{
+    font-size: 20px;
+}
+.setting i{
+    font-size: 30px;
+    color: #8492af;
+    cursor: pointer;
+}
+.PagePosition{
+    display: flex;
+    flex-wrap: wrap;
+}
+.colorSpan span{
+    color: #f83c7b;
+}
+.colorCompleted span{
+    color: #00bf1b;
+}

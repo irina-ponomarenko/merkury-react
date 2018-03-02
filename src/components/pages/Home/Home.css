@@ -120,7 +120,10 @@ h1{
     left: 23px;
     right: 0;
 }
-.userLine:after{
+.userLineAfter{
+    position: relative;
+}
+.userLineAfter:after{
     content: '';
     width: 1px;
     height: 35px;
@@ -157,7 +160,7 @@ h1{
     cursor: pointer;
 }
 .shareMessage{
-    margin-top: 16px;
+    margin-top: 13px;
 }
 .shareMessage .fa-share{
     margin-right: 15px;
@@ -171,6 +174,7 @@ h1{
 }
 .borderNone{
     border: none;
+    padding: 32px 34px;
 }
 .borderButtonNone{
     border-bottom: none;
@@ -180,4 +184,10 @@ h1{
 }
 .colorSpan h4{
     margin-bottom: 5px;
+}
+.messageBlock{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 45px;
 }
