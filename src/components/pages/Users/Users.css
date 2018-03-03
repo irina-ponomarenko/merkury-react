@@ -1,0 +1,51 @@
+.User td{
+    text-align: left;
+    font-size: 20px;
+    color: #0e1a35;
+    font-weight: 500;
+    background: #fff;
+    border: 1px solid #8492af;
+    padding: 15px 36px;
+}
+.User td p{
+    margin: 0;
+}
+.InfoUsers{
+    width: 100%;
+}
+.InfoUsers thead th{
+    font-size: 20px;
+    color: #8492af;
+    font-weight: 500;
+    padding-left: 40px;
+    padding-bottom: 28px;
+}
+.fioUser p{
+    margin: 0;
+}
+.fioUser span{
+    color: #8492af;
+}
+.statusUser p{
+    color: #00bf1b;
+}
+.PictureUser{
+    display: flex;
+    align-items: center;
+}
+.PictureUser span img{
+    width: 74px;
+    height: 74px;
+    border-radius: 100%;
+    margin-right: 38px;
+}
+.settingUser i{
+    font-size: 30px;
+    color: #8492af;
+}
+.noActive{
+    color: #8492af !important;
+}
+.statusUser p i{
+    font-size: 30px;
+}

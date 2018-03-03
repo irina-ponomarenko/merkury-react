@@ -2,7 +2,6 @@ import React from 'react';
 import './Home.css';
 import BoxWrapper from '../atoms/BoxWrapper';
 import Select from '../atoms/Select';
-import Messagr from '../Home/Message';
 import ReactHighcharts from 'react-highcharts';
 import  SalesChart  from '../../../config/pieChart.config';
 import ReportChart from '../../../config/splineChart.config';

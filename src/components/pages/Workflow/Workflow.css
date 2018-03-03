@@ -72,6 +72,7 @@
 .PagePosition{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .colorSpan span{
     color: #f83c7b;

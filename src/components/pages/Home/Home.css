@@ -171,6 +171,7 @@ h1{
 .activeMessage{
     background: #f4f5f8;
     border-left: 1px solid #8492af;
+    border-right: 1px solid  #8492af;
 }
 .borderNone{
     border: none;

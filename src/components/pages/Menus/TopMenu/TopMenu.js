@@ -37,10 +37,10 @@ import SlideMenu from '../SlideMenu/SlideMenu';
                          <div className="Menu">
                              <div className="FindSearchWrapper">
                                  <i className="fa fa-caret-left icon-block"></i>
-                                 <Link to ="" className="MenuButton">
+                                 <button className="MenuButton">
                                      <i className="fa fa-bars"></i>
-                                 </Link>
-                                 <Link to ="" className="Search"><i className="fa fa-search"></i></Link>
+                                 </button>
+                                 <button className="Search"><i className="fa fa-search"></i></button>
                              </div>
                          </div>
                      </div>
