@@ -7,15 +7,18 @@ import ProfilePictures4 from '../../../assets/images/profilePictures-4.png';
 import ProfilePictures5 from '../../../assets/images/profilePictures-5.png';
 import ProfilePictures6 from '../../../assets/images/profilePictures-6.png';
 import ProfilePictures7 from '../../../assets/images/profilePictures-7.png';
+import SelectSort from '../atoms/SelectSort';
 import Pagination from './PaginationPages';
 
 class Users extends React.Component {
     render() {
+        const forSelectSort = ["Active first","Active last"];
         return(
             <div className="Page">
                 <div className="WrapperPage">
                     <header className="PageHeader">
                         <h2 className="TitleUsers">Users <span>(128)</span></h2>
+                        <SelectSort data={forSelectSort}/>
                     </header>
                     <div className="wrapperInfoUsers">
                        <table className="InfoUsers">
