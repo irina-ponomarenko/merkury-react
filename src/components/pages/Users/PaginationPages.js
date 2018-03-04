@@ -8,9 +8,9 @@ class PaginationPages extends React.Component {
         this.setTotal = this.setTotal.bind(this);
         this.setDisplay = this.setDisplay.bind(this);
         this.state = {
-            total: 20,
-            display: 7,
-            number: 7,
+            total: 10,
+            display: 5,
+            number: 1,
         };
     }
     setTotal(event, total) {
@@ -46,6 +46,7 @@ class PaginationPages extends React.Component {
     }
 
     render() {
+        const self = this;
         return (
             <div
                 style = { {
@@ -63,13 +64,13 @@ class PaginationPages extends React.Component {
                     page
                 </h3>
                 <Pagination
-                    total = { this.state.total }
-                    current = { this.state.number }
-                    display = { this.state.display }
-                    onChange = { number => this.setState({ number }) }
+                    total = { self.state.total }
+                    current = { self.state.number }
+                    display = { self.state.display }
+                    onChange = { number => self.setState({ number }) }
                 />
             </div>
         );
     }
 }
-export default Pagination;
+export default PaginationPages;
