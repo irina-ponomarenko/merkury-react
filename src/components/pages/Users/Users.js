@@ -7,6 +7,7 @@ import ProfilePictures4 from '../../../assets/images/profilePictures-4.png';
 import ProfilePictures5 from '../../../assets/images/profilePictures-5.png';
 import ProfilePictures6 from '../../../assets/images/profilePictures-6.png';
 import ProfilePictures7 from '../../../assets/images/profilePictures-7.png';
+import Pagination from './PaginationPages';
 
 class Users extends React.Component {
     render() {
@@ -29,10 +30,12 @@ class Users extends React.Component {
                            <tbody>
                            <tr className="User">
                                <td className="PictureUser">
-                                   <span><img src={ProfilePictures2} alt="profilePictures"/></span>
-                                   <div className="fioUser">
-                                       <p>John Doe</p>
-                                       <span>CEO</span>
+                                   <div className="WrapperUsers">
+                                       <span><img src={ProfilePictures2} alt="profilePictures"/></span>
+                                       <div className="fioUser">
+                                           <p>John Doe</p>
+                                           <span>CEO</span>
+                                       </div>
                                    </div>
                                </td>
                                <td className="statusUser">
@@ -50,10 +53,12 @@ class Users extends React.Component {
                            </tr>
                            <tr className="User">
                                <td className="PictureUser">
-                                   <span><img src={ProfilePictures} alt="profilePictures"/></span>
-                                   <div className="fioUser">
-                                       <p>Nina Jones</p>
-                                       <span>UX Designer</span>
+                                   <div className="WrapperUsers">
+                                       <span><img src={ProfilePictures} alt="profilePictures"/></span>
+                                       <div className="fioUser">
+                                           <p>Nina Jones</p>
+                                           <span>UX Designer</span>
+                                       </div>
                                    </div>
                                </td>
                                <td className="statusUser">
@@ -71,10 +76,12 @@ class Users extends React.Component {
                            </tr>
                            <tr className="User">
                                <td className="PictureUser">
-                                   <span><img src={ProfilePictures4} alt="profilePictures"/></span>
-                                   <div className="fioUser">
-                                       <p>Alex Smith</p>
-                                       <span>Web Designer</span>
+                                   <div className="WrapperUsers">
+                                       <span><img src={ProfilePictures4} alt="profilePictures"/></span>
+                                       <div className="fioUser">
+                                           <p>Alex Smith</p>
+                                           <span>Web Designer</span>
+                                       </div>
                                    </div>
                                </td>
                                <td className="statusUser">
@@ -92,10 +99,12 @@ class Users extends React.Component {
                            </tr>
                            <tr className="User">
                                <td className="PictureUser">
-                                   <span><img src={ProfilePictures3} alt="profilePictures"/></span>
-                                   <div className="fioUser">
-                                       <p>Ann Clooney</p>
-                                       <span>Account Manager</span>
+                                   <div className="WrapperUsers">
+                                       <span><img src={ProfilePictures3} alt="profilePictures"/></span>
+                                       <div className="fioUser">
+                                           <p>Ann Clooney</p>
+                                           <span>Account Manager</span>
+                                       </div>
                                    </div>
                                </td>
                                <td className="statusUser">
@@ -113,10 +122,12 @@ class Users extends React.Component {
                            </tr>
                            <tr className="User">
                                <td className="PictureUser">
-                                   <span><img src={ProfilePictures6} alt="profilePictures"/></span>
-                                   <div className="fioUser">
-                                       <p>Patric Smith</p>
-                                       <span>Project Manager</span>
+                                   <div className="WrapperUsers">
+                                       <span><img src={ProfilePictures6} alt="profilePictures"/></span>
+                                       <div className="fioUser">
+                                           <p>Patric Smith</p>
+                                           <span>Project Manager</span>
+                                       </div>
                                    </div>
                                </td>
                                <td className="statusUser">
@@ -134,10 +145,12 @@ class Users extends React.Component {
                            </tr>
                            <tr className="User">
                                <td className="PictureUser">
-                                   <span><img src={ProfilePictures5} alt="profilePictures"/></span>
-                                   <div className="fioUser">
-                                       <p>Nicky Hunt</p>
-                                       <span>Product Designer</span>
+                                   <div className="WrapperUsers">
+                                       <span><img src={ProfilePictures5} alt="profilePictures"/></span>
+                                       <div className="fioUser">
+                                           <p>Nicky Hunt</p>
+                                           <span>Product Designer</span>
+                                       </div>
                                    </div>
                                </td>
                                <td className="statusUser">
@@ -155,10 +168,12 @@ class Users extends React.Component {
                            </tr>
                            <tr className="User">
                                <td className="PictureUser">
-                                   <span><img src={ProfilePictures7} alt="profilePictures"/></span>
-                                   <div className="fioUser">
-                                       <p>Jane Doe</p>
-                                       <span>Graphic Designer</span>
+                                   <div className="WrapperUsers">
+                                       <span><img src={ProfilePictures7} alt="profilePictures"/></span>
+                                       <div className="fioUser">
+                                           <p>Jane Doe</p>
+                                           <span>Graphic Designer</span>
+                                       </div>
                                    </div>
                                </td>
                                <td className="statusUser">
@@ -177,6 +192,7 @@ class Users extends React.Component {
                            </tbody>
                        </table>
                     </div>
+                    <Pagination/>
                 </div>
             </div>
         )
