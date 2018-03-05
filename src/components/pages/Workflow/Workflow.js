@@ -5,7 +5,7 @@ import Sortable from 'react-sortablejs';
 
 class Workflow extends React.Component {
     render() {
-        Sortable.create(ToDo, {
+        Sortable.create(toDo, {
             group: {
                 name: 'toDo',
                 put: ['Completed', 'InProgress'],
