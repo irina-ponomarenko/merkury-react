@@ -3,7 +3,7 @@ import React from 'react';
 class Completed extends React.Component {
     render(){
         return(
-            <ul className="messageList">
+            <ul className="messageList" id="Completed">
                 <li>
                     <div className="messageComponent">
                         <div className="icon">

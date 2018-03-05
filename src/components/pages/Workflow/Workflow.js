@@ -1,12 +1,36 @@
 import React from 'react';
 import './Workflow.css';
+import Sortable from 'react-sortablejs';
 
-import ToDo from './ToDo';
-import InProgress from './InProgress';
-import Completed from './Completed';
 
 class Workflow extends React.Component {
     render() {
+        Sortable.create(ToDo, {
+            group: {
+                name: 'toDo',
+                put: ['Completed', 'InProgress'],
+                pull: ['InProgress', 'Completed']
+            },
+            animation: 100
+        });
+
+        Sortable.create(InProgress, {
+            group: {
+                name: 'InProgress',
+                put: ['toDo', 'Completed'],
+                pull: ['toDo', 'Completed']
+            },
+            animation: 100
+        });
+
+        Sortable.create(Completed, {
+            group: {
+                name: 'Completed',
+                put: ['toDo', 'InProgress'],
+                pull: ['toDo', 'InProgress']
+            },
+            animation: 100
+        });
         return(
             <div className="Page">
                 <div className="WrapperPage PagePosition">
@@ -15,20 +39,205 @@ class Workflow extends React.Component {
                             <h2>To Do <span>(6)</span></h2>
                             <i className="fa fa-chevron-right"></i>
                         </header>
-                        <ToDo/>
+                        <ul className="messageList" id="toDo">
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>N</span>
+                                    </div>
+                                    <div className="titleMessage">
+                                        <p>New website for JCD.pl</p>
+                                        <span> <i className="fa fa-clock-o"></i> 5 days delays</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>F</span>
+                                    </div>
+                                    <div className="titleMessage">
+                                        <p>Free PSD Template vol. 3</p>
+                                        <span> <i className="fa fa-clock-o"></i> 5 days left</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>N</span>
+                                    </div>
+                                    <div className="titleMessage">
+                                        <p>New logo for Google</p>
+                                        <span> <i className="fa fa-clock-o"></i> 5 days left</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>N</span>
+                                    </div>
+                                    <div className="titleMessage">
+                                        <p>New website for Windu.org</p>
+                                        <span> <i className="fa fa-clock-o"></i> 5 days left</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>F</span>
+                                    </div>
+                                    <div className="titleMessage">
+                                        <p>Free PSD Template vol. 2</p>
+                                        <span> <i className="fa fa-clock-o"></i> 5 days left</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>I</span>
+                                    </div>
+                                    <div className="titleMessage">
+                                        <p>Iconset Vol. 3</p>
+                                        <span> <i className="fa fa-clock-o"></i> 5 days left</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div className="wrapperBlockPage">
                         <header className="PageHeader">
                             <h2>In Progress <span>(3)</span></h2>
                             <i className="fa fa-chevron-right"></i>
                         </header>
-                        <InProgress/>
+                        <ul className="messageList" id="InProgress">
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>N</span>
+                                    </div>
+                                    <div className="titleMessage">
+                                        <p>New logo for Apple</p>
+                                        <span> <i className="fa fa-clock-o"></i> 5 days delays</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>D</span>
+                                    </div>
+                                    <div className="titleMessage">
+                                        <p>Daily UI Kit</p>
+                                        <span> <i className="fa fa-clock-o"></i> 5 days left</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>B</span>
+                                    </div>
+                                    <div className="titleMessage colorSpan">
+                                        <p>Business Cards</p>
+                                        <span> <i className="fa fa-clock-o"></i> 2 days left</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div className="wrapperBlockPage">
                         <header className="PageHeader">
                             <h2>Completed <span>(4)</span></h2>
                         </header>
-                        <Completed/>
+                        <ul className="messageList" id="Completed">
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>F</span>
+                                    </div>
+                                    <div className="titleMessage colorCompleted">
+                                        <p>Free PSD Template vol. 1</p>
+                                        <span> <i className="fa fa-check-circle-o"></i> Completed!</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>I</span>
+                                    </div>
+                                    <div className="titleMessage colorCompleted">
+                                        <p>Iconset vol. 1</p>
+                                        <span> <i className="fa fa-check-circle-o"></i> Completed!</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>N</span>
+                                    </div>
+                                    <div className="titleMessage colorCompleted">
+                                        <p>New website for Symu.co</p>
+                                        <span> <i className="fa fa-check-circle-o"></i> Completed!</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div className="messageComponent">
+                                    <div className="icon">
+                                        <span>I</span>
+                                    </div>
+                                    <div className="titleMessage colorCompleted">
+                                        <p>Iconset vol. 2</p>
+                                        <span> <i className="fa fa-check-circle-o"></i> Completed!</span>
+                                    </div>
+                                </div>
+                                <div className="setting">
+                                    <i className="fa fa-ellipsis-v"></i>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

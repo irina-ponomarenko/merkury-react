@@ -3,7 +3,7 @@ import React from 'react';
 class ToDo extends React.Component {
     render() {
         return(
-            <ul className="messageList">
+            <ul className="messageList" id="InProgress">
                 <li>
                     <div className="messageComponent">
                         <div className="icon">
