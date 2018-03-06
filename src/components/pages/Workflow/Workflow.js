@@ -4,8 +4,9 @@ import Sortable from 'react-sortablejs';
 
 
 class Workflow extends React.Component {
-    render() {
-        Sortable.create(toDo, {
+    componentDidMount(){
+        var toDo = this.firstBlock;
+        var sortable = Sortable.create(toDo, {
             group: {
                 name: 'toDo',
                 put: ['Completed', 'InProgress'],
@@ -14,7 +15,8 @@ class Workflow extends React.Component {
             animation: 100
         });
 
-        Sortable.create(InProgress, {
+        var InProgress = this.secondBlock;
+        var sortable = Sortable.create(InProgress, {
             group: {
                 name: 'InProgress',
                 put: ['toDo', 'Completed'],
@@ -23,7 +25,8 @@ class Workflow extends React.Component {
             animation: 100
         });
 
-        Sortable.create(Completed, {
+        var Completed = this.lastBlock;
+        var sortable = Sortable.create(Completed, {
             group: {
                 name: 'Completed',
                 put: ['toDo', 'InProgress'],
@@ -31,6 +34,8 @@ class Workflow extends React.Component {
             },
             animation: 100
         });
+    }
+    render() {
         return(
             <div className="Page">
                 <div className="WrapperPage PagePosition">
@@ -39,7 +44,7 @@ class Workflow extends React.Component {
                             <h2>To Do <span>(6)</span></h2>
                             <i className="fa fa-chevron-right"></i>
                         </header>
-                        <ul className="messageList" id="toDo">
+                        <ul className="messageList" id="toDo" ref={el => this.fisrtBlock = el}>
                             <li>
                                 <div className="messageComponent">
                                     <div className="icon">
@@ -131,7 +136,7 @@ class Workflow extends React.Component {
                             <h2>In Progress <span>(3)</span></h2>
                             <i className="fa fa-chevron-right"></i>
                         </header>
-                        <ul className="messageList" id="InProgress">
+                        <ul className="messageList" id="InProgress" ref={el => this.secondBlock = el}>
                             <li>
                                 <div className="messageComponent">
                                     <div className="icon">
@@ -180,7 +185,7 @@ class Workflow extends React.Component {
                         <header className="PageHeader">
                             <h2>Completed <span>(4)</span></h2>
                         </header>
-                        <ul className="messageList" id="Completed">
+                        <ul className="messageList" id="Completed" ref={el => this.lastBlock = el}>
                             <li>
                                 <div className="messageComponent">
                                     <div className="icon">
