@@ -1,6 +1,6 @@
 import React from 'react';
 import './Workflow.css';
-import Sortable from 'react-sortablejs';
+import Sortable from 'sortablejs';
 
 
 class Workflow extends React.Component {
@@ -44,7 +44,7 @@ class Workflow extends React.Component {
                             <h2>To Do <span>(6)</span></h2>
                             <i className="fa fa-chevron-right"></i>
                         </header>
-                        <ul className="messageList" id="toDo" ref={el => this.fisrtBlock = el}>
+                        <ul className="messageList" id="toDo" ref={el => this.firstBlock = el}>
                             <li>
                                 <div className="messageComponent">
                                     <div className="icon">
