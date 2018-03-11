@@ -12,6 +12,8 @@ import  DonutChart from '../atoms/DonutChart';
 
 class Statistics extends React.Component {
     render() {
+        const forSalesSelect = ["Last Year","Last Month","Last Week"];
+        const forTypeSelect = ["Notifications","last month","last week"];
         const  dunotChart = [
             {
                 graphic: {
@@ -41,9 +43,20 @@ class Statistics extends React.Component {
                 text: "Channel Sales"
             }
 
-        ]
-        const forSalesSelect = ["Last Year","Last Month","Last Week"];
-        const forTypeSelect = ["Notifications","last month","last week"];
+        ];
+        const listSalesCharts = [
+            {
+                title: "1,560",
+                text: "Sales",
+                chart: SalesCharts
+            },
+            {
+                title: "3,230",
+                text: "Sales",
+                chart: ViewsCharts
+            }
+
+        ];
         return(
             <div className="Page">
                 <div className="WrapperPage">
@@ -56,20 +69,19 @@ class Statistics extends React.Component {
                     </header>
                     <div className="BoxGroup">
                         <BoxWrapper className="BoxWrapper--Position">
-                            <div className="WrapperGrafik">
-                                <div className="WrapperTitle">
-                                    <h4>1,560</h4>
-                                    <span>Sales</span>
-                                </div>
-                                <ReactHighcharts config={SalesCharts}></ReactHighcharts>
-                            </div>
-                            <div className="WrapperGrafik">
-                                <div className="WrapperTitle">
-                                    <h4>3,230</h4>
-                                    <span>Sales</span>
-                                </div>
-                            <ReactHighcharts config={ViewsCharts}></ReactHighcharts>
-                            </div>
+                            {
+                                listSalesCharts.map((item, index) => {
+                                    return (
+                                        <div className="WrapperGrafik" key={index}>
+                                            <div className="WrapperTitle">
+                                                <h4>{item.title}</h4>
+                                                <span>{item.text}</span>
+                                            </div>
+                                            <ReactHighcharts config={item.chart}/>
+                                        </div>
+                                    )
+                                })
+                            }
                         </BoxWrapper>
                         <BoxWrapper>
                             <header className="BoxWrapperHeader">
