@@ -1,0 +1,29 @@
+.rbc-calendar{
+    min-height: 900px;
+    background: #fff;
+}
+.rbc-event{
+    background: #f6f7fa;
+    color: black;
+    border-left: 5px solid #f83c7b;
+    border-radius: 0;
+    padding: 20px;
+    text-align: left;
+}
+.rbc-event-allday{
+    border-left: 5px solid #5584ff;
+}
+.rbc-date-cell a{
+    display: flex;
+    padding: 20px;
+    font-weight: 700;
+}
+.rbc-header span{
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+}
+.rbc-toolbar-label{
+    font-size: 36px;
+    font-weight: 700;
+    font-family: "Roboto",sans-serif;
+}

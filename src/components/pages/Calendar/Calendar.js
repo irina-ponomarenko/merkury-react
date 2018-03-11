@@ -1,5 +1,6 @@
 import React from 'react';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import './Calendar.css';
 
 import BigCalendar from 'react-big-calendar'
 import events from './events';

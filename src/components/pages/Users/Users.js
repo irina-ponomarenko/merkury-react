@@ -260,7 +260,7 @@ class Users extends React.Component {
         };
     }
     render() {
-        let fff;
+        let activeFirst;
         const listActive = this.userList.filter((item) => {
             if (item.statusUser.class !== "noActive"){
                 return item;
@@ -275,16 +275,15 @@ class Users extends React.Component {
         const status = "Active last";
 
         if (status === "Active first") {
-            fff = listActive.concat(listNonActive);
+            activeFirst = listActive.concat(listNonActive);
         }
         else if (status === "Active last") {
-            fff = listNonActive.concat(listActive);
+            activeFirst = listNonActive.concat(listActive);
         }
-
 
         const indexStart = this.state.number * 7 - 7;
         const indexEnd = this.state.number * 7;
-        const list = fff.slice(indexStart,  indexEnd);
+        const list = activeFirst.slice(indexStart,  indexEnd);
         const forSelectSort = ["Active first","Active last"];
         return(
             <div className="Page">
@@ -336,7 +335,7 @@ class Users extends React.Component {
                            </tbody>
                        </table>
                     </div>
-                    <div style={{ width: 500, margin: '0 auto' }}>
+                    <div className="paginationWrapper">
                         <Pagination
                             total = { this.state.total }
                             current = { this.state.number }

@@ -50,3 +50,15 @@
 .statusUser p i{
     font-size: 30px;
 }
+.paginationWrapper{
+    margin: 0 auto;
+    width: 500px;
+    margin-top: 53px;
+}
+.paginationWrapper div  div{
+    background: #fff;
+}
+.paginationWrapper div div{
+    margin-right: 2px;
+    font-size: 14px;
+}
