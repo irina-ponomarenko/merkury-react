@@ -14,6 +14,11 @@ import Settings from './components/pages/Settings/Settings';
 import Login from './components/pages/Login/Login';
 import NotFound from './components/pages/NotFound';
 
+import localizer from 'react-big-calendar/lib/localizers/globalize';
+import globalize from 'globalize';
+
+localizer(globalize);
+
 const App = () =>{
 const BrowserHistory = createBrowserHistory();
         return (

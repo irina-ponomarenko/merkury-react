@@ -1,5 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+
+import BigCalendar from 'react-big-calendar'
+import events from './events';
+
+let allViews = Object.keys(BigCalendar.Views).map(k => BigCalendar.Views[k]);
 
 class Calendar extends React.Component {
     render() {
@@ -8,11 +13,15 @@ class Calendar extends React.Component {
                 <div className="WrapperPage">
                     <header className="PageHeader">
                         <div className="TitleCalendar">
-                            <Link to=""><i className="fa fa-caret-left ChevronLeft"></i></Link>
-                            <h2>January 2016</h2>
-                            <Link to=""><i className="fa fa-caret-right ChevronRight"></i></Link>
                         </div>
                     </header>
+                    <BigCalendar
+                        events={events}
+                        views={allViews}
+                        step={60}
+                        showMultiDayTimes
+                        defaultDate={new Date(2018, 3, 1)}
+                    />
                 </div>
             </div>
         )

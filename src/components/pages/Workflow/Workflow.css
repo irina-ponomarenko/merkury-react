@@ -20,6 +20,7 @@
 }
 .messageList{
     padding: 0;
+    min-height: 200px;
 }
 .messageList li{
     background: #fff;

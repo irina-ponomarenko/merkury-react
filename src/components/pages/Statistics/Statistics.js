@@ -7,12 +7,41 @@ import Select from '../atoms/Select';
 import SelectPeriod from '../atoms/SelectType';
 import  SalesCharts from '../../../config/splineChartSales.config';
 import ViewsCharts from '../../../config/splineChartVievs.config';
-import  DonutChartBlue from '../atoms/DonutChartBlue';
-import  DonutChartViolet from '../atoms/DonutChartViolet';
-import  DonutChartRed from '../atoms/DonutChartRed';
+import  DonutChart from '../atoms/DonutChart';
+
 
 class Statistics extends React.Component {
     render() {
+        const  dunotChart = [
+            {
+                graphic: {
+                    valueColor: "#5484ff",
+                    value: "45",
+                    total: "100"
+                },
+                price: "2,300$",
+                text: "Direct Sales"
+            },
+            {
+                graphic: {
+                    valueColor: "#aa5fb9",
+                    value: "20",
+                    total: "100"
+                },
+                price: "980$",
+                text: "Channel Sales"
+            },
+            {
+                graphic: {
+                    valueColor: "#f83c7b",
+                    value: "25",
+                    total: "100"
+                },
+                price: "1,250$",
+                text: "Channel Sales"
+            }
+
+        ]
         const forSalesSelect = ["Last Year","Last Month","Last Week"];
         const forTypeSelect = ["Notifications","last month","last week"];
         return(
@@ -62,27 +91,23 @@ class Statistics extends React.Component {
                             </div>
                         </header>
                         <div className="ContainerCharts">
-                            <div className="WrapperDonutChart">
-                                <DonutChartBlue value="45" total="100"></DonutChartBlue>
-                                <div className="WrapperTitle">
-                                    <h4>2,300$</h4>
-                                    <span>Direct Sales</span>
-                                </div>
-                            </div>
-                            <div className="WrapperDonutChart">
-                                <DonutChartViolet value="20" total="100"></DonutChartViolet>
-                                <div className="WrapperTitle">
-                                    <h4>980$</h4>
-                                    <span>Channel Sales</span>
-                                </div>
-                            </div>
-                            <div className="WrapperDonutChart">
-                                <DonutChartRed value="25" total="100"></DonutChartRed>
-                                <div className="WrapperTitle">
-                                    <h4>1,250$</h4>
-                                    <span>Channel Sales</span>
-                                </div>
-                            </div>
+                            {
+                                dunotChart.map((item, index) => {
+                                    return (
+                                        <div className="WrapperDonutChart" key={index}>
+                                            <DonutChart
+                                                valueColor={item.graphic.valueColor}
+                                                value={item.graphic.value}
+                                                total={item.graphic.total}/>
+                                            <div className="WrapperTitle">
+                                                <h4>{item.price}</h4>
+                                                <span>{item.text}</span>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+
                         </div>
                     </BoxWrapper>
                 </div>
