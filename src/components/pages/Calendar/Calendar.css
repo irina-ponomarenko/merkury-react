@@ -9,6 +9,7 @@
     border-radius: 0;
     padding: 20px;
     text-align: left;
+    margin-top: 2px;
 }
 .rbc-event-allday{
     border-left: 5px solid #5584ff;

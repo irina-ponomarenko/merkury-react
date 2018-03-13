@@ -1,5 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import store from "../../../redux/store";
 import './Users.css';
+
 import ProfilePictures from '../../../assets/images/profilePictures.png';
 import ProfilePictures2 from '../../../assets/images/profilePictures-2.png';
 import ProfilePictures3 from '../../../assets/images/profilePictures-3.png';
@@ -259,7 +262,17 @@ class Users extends React.Component {
             number: 1,
         };
     }
+    handlerClick(e) {
+        store.dispatch({
+            type: 'SORT_STATUS',
+            payload: {
+                status: e.target.value
+            }
+        });
+    }
     render() {
+        console.log(this.props.statusProps);
+
         let activeFirst;
         const listActive = this.userList.filter((item) => {
             if (item.statusUser.class !== "noActive"){
@@ -272,7 +285,7 @@ class Users extends React.Component {
             }
         });
         console.log(listNonActive);
-        const status = "Active last";
+        const status = this.props.statusProps || "Active first";
 
         if (status === "Active first") {
             activeFirst = listActive.concat(listNonActive);
@@ -348,4 +361,12 @@ class Users extends React.Component {
         )
     }
 }
-export default Users;
+const mapState = (state, props) => {
+    console.log(state);
+
+    return {
+        statusProps: state.status
+    }
+};
+
+export default connect(mapState)(Users);

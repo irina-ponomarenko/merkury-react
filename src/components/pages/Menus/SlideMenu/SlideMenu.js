@@ -43,7 +43,13 @@ import Logo from '../../../../assets/images/logo.png';
                  </div>
                  <ul>
                      {listMenuNav.map((item, index) =>
-                         <li key={index}><NavLink exact to={item.Link} className={item.className} activeClassName="activeNav">{item.label}</NavLink>
+                         <li key={index}>
+                             <NavLink
+                                 exact to={item.Link}
+                                 className={item.className}
+                                 activeClassName="activeNav">
+                                 {item.label}
+                             </NavLink>
                          </li>
                      )};
                  </ul>
