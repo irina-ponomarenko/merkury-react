@@ -34,15 +34,19 @@ import store from "../../../../redux/store";
          store.dispatch({
              type: 'TOOGLE_STATUS',
              payload: {
-                 toogle: e.target.value
+                 toogle: !store.getState().toogle
              }
          });
      }
      render() {
          console.log(this.props.toogleProps);
+
          return(
              <div className="WrapperTopMenu">
-                 <SlideMenu/>
+                 {this.props.toggle
+                 ? <SlideMenu />
+                 : null
+                 }
                  <div className="TopMenu">
                      <div className="WrapperMenu">
                          <div className="Menu">
