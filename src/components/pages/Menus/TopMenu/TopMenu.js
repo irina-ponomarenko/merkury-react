@@ -7,29 +7,29 @@ import { connect } from 'react-redux';
 import store from "../../../../redux/store";
 
  class TopMenu extends React.Component {
-     // componentDidMount(){
-     //     const $ = window.$;
-     //     $('.MenuButton').click(function() {
-     //         $('.SlideMenu').animate({
-     //             left: '0px'
-     //         }, 200);
-     //
-     //         $('body').animate({
-     //             left: '318px'
-     //         }, 200);
-     //         $('.icon-block').css('display','block');
-     //     });
-     //     $('.icon-block').click(function() {
-     //         $('.SlideMenu').animate({
-     //             left: '-318px'
-     //         }, 200);
-     //
-     //         $('body').animate({
-     //             left: '0px'
-     //         }, 200);
-     //         $('.icon-block').css('display','none');
-     //     });
-     // }
+     componentDidMount(){
+         const $ = window.$;
+         $('.MenuButton').click(function() {
+             $('.SlideMenu').animate({
+                 left: '0px'
+             }, 200);
+
+             $('body').animate({
+                 left: '318px'
+             }, 200);
+             $('.icon-block').css('display','block');
+         });
+         $('.icon-block').click(function() {
+             $('.SlideMenu').animate({
+                 left: '-318px'
+             }, 200);
+
+             $('body').animate({
+                 left: '0px'
+             }, 200);
+             $('.icon-block').css('display','none');
+         });
+     }
      handleClick(e) {
          store.dispatch({
              type: 'TOOGLE_STATUS',
@@ -43,16 +43,13 @@ import store from "../../../../redux/store";
 
          return(
              <div className="WrapperTopMenu">
-                 {this.props.toggle
-                 ? <SlideMenu />
-                 : null
-                 }
+                 <SlideMenu />
                  <div className="TopMenu">
                      <div className="WrapperMenu">
                          <div className="Menu">
                              <div className="FindSearchWrapper">
                                  <i className="fa fa-caret-left icon-block"></i>
-                                 <button className="MenuButton" onClick={this.handleClick}>
+                                 <button className="MenuButton">
                                      <i className="fa fa-bars"></i>
                                  </button>
                                  <button className="Search"><i className="fa fa-search"></i></button>
